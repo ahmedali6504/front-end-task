@@ -1,0 +1,347 @@
+.dashboard-section {
+    min-height: 100vh;
+    /* background: linear-gradient(135deg, #001428 0%, #003366 100%); */
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+/* ========================================
+   WELCOME PANEL (اللوحة الأولى - الترحيب)
+   ======================================== */
+.welcome-panel {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3rem;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] .welcome-panel {
+    background: #151b3d;
+    border-color: #2a3050;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 102, 255, 0.2);
+}
+
+.welcome-icon {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 3rem;
+    color: white;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 102, 255, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 20px rgba(0, 102, 255, 0);
+    }
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+[data-theme="dark"] .welcome-title {
+    color: #e8eaf0;
+}
+
+.welcome-name {
+    font-size: 1.75rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+/* ========================================
+   DATA PANEL (اللوحة الثانية - البيانات)
+   ======================================== */
+.data-panel {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .data-panel {
+    background: #151b3d;
+    border-color: #2a3050;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.data-panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 102, 255, 0.2);
+}
+
+/* Data Header */
+.data-header {
+    background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.data-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.data-header i {
+    font-size: 1.5rem;
+}
+
+/* Data Content */
+.data-content {
+    padding: 2rem;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .data-row {
+    background: #0a0e27;
+    border-color: #2a3050;
+}
+
+.data-row:last-child {
+    margin-bottom: 0;
+}
+
+.data-row:hover {
+    border-color: #0066ff;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 102, 255, 0.2);
+}
+
+.data-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 1rem;
+}
+
+[data-theme="dark"] .data-label {
+    color: #a0a8b8;
+}
+
+.data-label i {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.data-value {
+    color: #212529;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+[data-theme="dark"] .data-value {
+    color: #e8eaf0;
+}
+
+/* Data Footer */
+.data-footer {
+    padding: 2rem;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+[data-theme="dark"] .data-footer {
+    border-top-color: #2a3050;
+}
+
+.btn-logout {
+    background: transparent;
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #dc3545;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(220, 53, 69, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (Mobile First)
+   ======================================== */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .dashboard-section {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    .welcome-panel {
+        padding: 2rem 1.5rem;
+    }
+
+    .welcome-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .welcome-title {
+        font-size: 1.75rem;
+    }
+
+    .welcome-name {
+        font-size: 1.25rem;
+    }
+
+    .data-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .data-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .data-content {
+        padding: 1.5rem;
+    }
+
+    .data-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+
+    .data-value {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .data-footer {
+        padding: 1.5rem;
+    }
+
+    .btn-logout {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
+
+/* Medium devices (tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .welcome-panel {
+        padding: 2.5rem;
+    }
+
+    .welcome-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2.75rem;
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+    }
+
+    .welcome-name {
+        font-size: 1.5rem;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Extra large devices (992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ========================================
+   NOT LOGGED IN SECTION
+   ======================================== */
+.not-logged-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #001428 0%, #003366 100%);
+    padding-top: 80px;
+}
+
+.not-logged-section i {
+    color: #6c757d;
+}
+
+[data-theme="dark"] .not-logged-section i {
+    color: #a0a8b8;
+}
+
+.not-logged-section h2 {
+    color: white;
+}
